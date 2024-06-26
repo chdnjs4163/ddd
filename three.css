@@ -1,0 +1,10 @@
+@charset "utf-8";
+h1{
+    text-shadow: 5px 5px gainsboro; 
+    border: 5px solid blue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 10px 10px 5px grey;   
+}

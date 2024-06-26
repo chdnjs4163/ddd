@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="five.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+       font-weight: bold;
+       cursor: hand;
+       color: black;
+       font-size: 30px; /* 텍스트 크기 조정 */
+        } 
+       body {
+         background-color: whitesmoke;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+       }
+   
+       /* 링크를 진하게 만들기 위한 스타일 */
+       a {
+         font-weight: bold;
+         color: red; /* 링크를 구분하기 위해 색상을 파란색으로 변경 */
+       }
+   
+       /* 일반 텍스트 스타일 */
+       .bold-text {
+         font-weight: bold;
+       }
+   
+       /* 이미지 스타일 */
+       .image {
+         width: 100%;
+         height: auto;
+         object-cover: cover;
+       }
+     </style>
+</head>
+<body>
+    <div class="fixed-top">
+        <p class="text-[82.00836944580078px] italic text-left text-black">
+            <h1 class="fifth" onclick="openPopup()">Remember them</h1>
+            <script>
+              function openPopup() {
+                var popup = window.open("", "Popup", "width=900,height=300");
+                popup.document.write("<h2>이 나라를 위해 우리가 할 수 있는 가장 큰 일은 자유와 독립을 쟁취하는 것이다.</h2>");
+              }
+            </script>
+        </p>
+        <div style="text-align: left;">
+            <span style="cursor: hand; color: black; font-weight: bold; font-size: 30px;">
+                올바른 태극기는 무엇일까요?
+            </span>
+            <br>
+        </div>
+        </p>
+    </div>
+    <div class="content">
+        <div class="image-row">
+            <div>
+                <p class="image-label"><a href="https://r2.jjalbot.com/2023/03/imXRAGSdQk.jpeg">1번</a></p>
+                <img src="imag/image_30.jpeg" class="w-[312px] h-[211px] object-cover" />
+            </div>
+            <div>
+                <p class="image-label"><a href="https://r2.jjalbot.com/2023/03/We2yXUIaAs.mp4">2번</a></p>
+                <img src="imag/image_31.jpeg" class="w-[315px] h-[210px] object-cover" />
+            </div>
+        </div>
+        <div class="image-row">
+            <div>
+                <p class="image-label"><a href="https://r2.jjalbot.com/2023/03/pryK0BKYD4.jpeg">3번</a></p>
+                <img src="imag/image_32.jpeg" class="w-[319px] h-52 object-cover" />
+            </div>
+            <div>
+                <p class="image-label"><a href="https://r2.jjalbot.com/2023/03/qAHNNmFXjR.jpeg">4번</a></p>
+                <img src="imag/image_33.jpeg" class="w-[312px] h-[214px] object-cover" />
+            </div>
+        </div>
+        <div class="w-[1270px] h-[283px] bg-[#d9d9d9]"></div>
+        <p class="text-[82.00836944580078px] italic text-left text-black">
+            이분은 독립운동가일까요 아님 친일파일까요?
+        </p>
+        <img src="imag/image_34.jpeg" class="w-[312px] h-[214px] object-cover" />
+        <div class="w-[706px] h-[206px] bg-[#d9d9d9]"></div>
+        <p class="italic text-left text-black text-5xl">
+            <a href="https://r2.jjalbot.com/2023/03/qAHNNmFXjR.jpeg">틀린자 만 선택</a>
+        </p>
+    </div>
+    <script>
+        // 타이머 설정
+        let timeLeft = 30; // 30초
+
+        // 타이머 표시
+        const timerElement = document.createElement('div');
+        timerElement.style.position = 'fixed';
+        timerElement.style.top = '10px';
+        timerElement.style.right = '10px';
+        timerElement.style.fontSize = '24px';
+        timerElement.style.fontWeight = 'bold';
+        timerElement.style.padding = '10px';
+        timerElement.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        timerElement.textContent = `시간: ${timeLeft}초`;
+        document.body.appendChild(timerElement);
+
+        // 타이머 함수
+        function updateTimer() {
+            timeLeft--;
+            timerElement.textContent = `시간: ${timeLeft}초`;
+
+            if (timeLeft === 0) {
+                clearInterval(timerInterval);
+                alert('시간이 초과되었습니다. 올바른 태극기를 선택하지 못했습니다.');
+            }
+        }
+
+        // 타이머 시작
+        const timerInterval = setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
+</body>
+</html>
